@@ -181,6 +181,16 @@ return {
   --add golang lsp and default config
   { import = "lazyvim.plugins.extras.lang.go" },
 
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        go = { "goimports", "gofumpt" },
+      },
+    },
+  },
+
   -- add any tools you want to have installed below
   {
     "williamboman/mason.nvim",
